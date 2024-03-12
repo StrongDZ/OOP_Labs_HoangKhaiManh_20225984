@@ -1,4 +1,5 @@
 import javax.swing.JOptionPane;
+
 public class ShowTwoNumbers{
     public static void main(String args[]){
         String strNum1,strNum2;
