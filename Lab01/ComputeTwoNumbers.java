@@ -19,6 +19,7 @@ public class ComputeTwoNumbers {
             strNotification += "\nQuotient: " + Double.toString(num1 / num2);
         } else {
             strNotification += "\nQuotient: Undefined (division by zero)";
+            
         }
         JOptionPane.showMessageDialog(null,strNotification,"Caculations with two numbers", JOptionPane.INFORMATION_MESSAGE);
 
