@@ -13,5 +13,6 @@ public class StarTriangle {
             star+="**";
         }
         input.close();
+        
     }
 }
