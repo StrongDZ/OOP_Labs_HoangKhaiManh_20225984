@@ -1,5 +1,6 @@
 import java.lang.Math;
 import javax.swing.JOptionPane;
+
 public class SolveEquation {
 
     public static void onevar_firstde(){
