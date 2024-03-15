@@ -20,3 +20,4 @@
 	useHttpPath = true
 [init]
 	defaultBranch = master
+	
