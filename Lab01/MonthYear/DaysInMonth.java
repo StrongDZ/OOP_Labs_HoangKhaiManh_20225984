@@ -1,6 +1,5 @@
 package MonthYear;
 import javax.swing.JOptionPane;
-
 public class DaysInMonth {
 
     public static boolean LeapYear(int po){
