@@ -47,7 +47,7 @@ public class SolveEquation {
         do {
             a = Double.parseDouble((String) JOptionPane.showInputDialog(null, "Input coefficient a :", "Second degree equation with one variable", JOptionPane.INFORMATION_MESSAGE));
             if(a==0)JOptionPane.showInputDialog(null, "Coeffiicient a must be different from 0", "Error input", JOptionPane.INFORMATION_MESSAGE);
-        } while (a==0); // Đảm bảo a không bằng 0
+        } while (a==0); 
     
         b = Double.parseDouble((String) JOptionPane.showInputDialog(null, "Input coefficient b:", "Second degree equation with one variable", JOptionPane.INFORMATION_MESSAGE));
         c = Double.parseDouble((String) JOptionPane.showInputDialog(null, "Input coefficient c:", "Second degree equation with one variable", JOptionPane.INFORMATION_MESSAGE));
