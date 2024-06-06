@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="736.0" spacing="30.0"
+      style="-fx-background-image: url('file:/D:/Git/OOP_Labs_HoangKhaiManh_20225984/Lab%2004/src/hust/soict/globalict/aims/screen/customer/image/bookBackground.jpg');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label fx:id="lbBook" text="fafafa">
+         <font>
+            <Font name="Book Antiqua Bold Italic" size="80.0" />
+         </font>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Label>
+      <Label fx:id="lbCategory" text="Category">
+         <font>
+            <Font name="Bookman Old Style" size="28.0" />
+         </font></Label>
+      <Label fx:id="lbAuthor" contentDisplay="CENTER" prefWidth="400.0" text="Author:" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
+         <font>
+            <Font name="Bookman Old Style" size="28.0" />
+         </font></Label>
+      <Label fx:id="lbCost" text="COST $">
+         <VBox.margin>
+            <Insets top="40.0" />
+         </VBox.margin>
+         <font>
+            <Font name="Bodoni MT Black" size="32.0" />
+         </font>
+      </Label>
+   </children>
+   <padding>
+      <Insets top="50.0" />
+   </padding>
+</VBox>
