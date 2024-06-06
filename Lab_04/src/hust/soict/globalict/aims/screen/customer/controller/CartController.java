@@ -1,10 +1,7 @@
 package hust.soict.globalict.aims.screen.customer.controller;
 
 import hust.soict.globalict.aims.cart.Cart;
-import hust.soict.globalict.aims.media.Book;
-import hust.soict.globalict.aims.media.CompactDisc;
-import hust.soict.globalict.aims.media.Media;
-import hust.soict.globalict.aims.media.Playable;
+import hust.soict.globalict.aims.media.*;
 import hust.soict.globalict.aims.store.Store;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -19,6 +16,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.io.IOException;
 
 public class CartController {
@@ -62,6 +60,8 @@ public class CartController {
     private RadioButton radioBtnFilterId;
     @FXML
     private RadioButton radioBtnFilterTitle;
+    @FXML
+    private Button btnPlaceOrder;
     @FXML
     public void initialize() {
         colMediaId.setCellValueFactory(
@@ -149,20 +149,28 @@ public class CartController {
         try {
             final String CD_FILE_PATH = "/hust/soict/globalict/aims/screen/customer/view/PlayCD.fxml";
             final String BOOK_FILE_PATH = "/hust/soict/globalict/aims/screen/customer/view/PlayBook.fxml";
+            final String DVD_FILE_PATH = "/hust/soict/globalict/aims/screen/customer/view/PlayDVD.fxml";
             FXMLLoader fxmlLoader = new FXMLLoader();
-
+            Stage stage = new Stage();
             if(currentMedia instanceof CompactDisc){
+                stage.setTitle("Playing...");
                 fxmlLoader.setLocation(getClass().getResource(CD_FILE_PATH));
                 fxmlLoader.setController(new PlayingCDController((CompactDisc) currentMedia));
             }
             if(currentMedia instanceof Book){
+                stage.setTitle("Information");
                 fxmlLoader.setLocation(getClass().getResource(BOOK_FILE_PATH));
                 fxmlLoader.setController(new PlayingBookController((Book) currentMedia));
             }
+            if(currentMedia instanceof DigitalVideoDisc){
+                stage.setTitle(currentMedia.getTitle());
+                fxmlLoader.setLocation(getClass().getResource(DVD_FILE_PATH));
+                fxmlLoader.setController(new PlayingDVDController((DigitalVideoDisc) currentMedia));
+            }
             Parent root = fxmlLoader.load();
-            Stage stage = new Stage();
+
             stage.setScene(new Scene(root));
-            stage.setTitle("Playing");
+
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -187,5 +195,15 @@ public class CartController {
     }
     public void lbtotalcost(){
         costLabel.setText(cart.totalCost()+" $");
+    }
+    @FXML
+    void btnPlaceOrderPressed(){
+        if(cart.getItemsOrdered().isEmpty()){
+            JOptionPane.showMessageDialog(null, "You have not put anything in your cart");
+            return;
+        }
+        JOptionPane.showMessageDialog(null, "You did successfully order! Total cost is " + costLabel.getText());
+        cart.clear();
+        lbtotalcost();
     }
 }

@@ -55,6 +55,10 @@ public class PlayingCDController {
 
     @FXML
     private Label lbCategory;
+    @FXML
+    private Label lbMax;
+    @FXML
+    private Label lbMin;
     private CompactDisc cd;
 
     public PlayingCDController(CompactDisc cd){
@@ -80,14 +84,17 @@ public class PlayingCDController {
         lbCategory.setText("Category: " + cd.getCategory());
         lbDirector.setText("Director: " + cd.getDirector());
         lbLength.setText("TOTAL LENGTH: " + cd.getLength());
+        lbMin.setText("00:00");
+        int length = cd.getLength();
+        lbMax.setText(length/60 +":"+ length%60);
 
         Image image = new Image("hust/soict/globalict/aims/screen/customer/image/ImagePlaylist.jpg"); // Đường dẫn đến hình ảnh
         ImageView imageView = new ImageView(image);
         lbImage.setGraphic(imageView);
 
-        setImageToCircle(forward, "hust/soict/globalict/aims/screen/customer/image/forward.jpg");
+        setImageToCircle(forward, "hust/soict/globalict/aims/screen/customer/image/forward.png");
         setImageToCircle(pause, "hust/soict/globalict/aims/screen/customer/image/pause.png");
-        setImageToCircle(back, "hust/soict/globalict/aims/screen/customer/image/back.jpg");
+        setImageToCircle(back, "hust/soict/globalict/aims/screen/customer/image/back.png");
 
     }
     private void setImageToCircle(Circle circle, String imagePath) {

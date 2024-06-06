@@ -6,7 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="736.0" spacing="30.0" style="-fx-background-image: url('file:/D:/Git/OOP_Labs_HoangKhaiManh_20225984/Lab%2004/src/hust/soict/globalict/aims/screen/customer/image/bookBackground.jpg');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="490.0" prefWidth="736.0" spacing="30.0" style="-fx-background-image: url('file:/D:/Git/OOP_Labs_HoangKhaiManh_20225984/Lab_04/src/hust/soict/globalict/aims/screen/customer/image/bookBackground.jpg');" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label fx:id="lbBook" text="fafafa">
          <font>

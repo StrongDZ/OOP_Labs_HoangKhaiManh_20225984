@@ -46,6 +46,7 @@
             <Insets left="20.0" />
          </padding>
       </HBox>
+      <Separator opacity="0.3" prefWidth="200.0" />
       <TableView fx:id="tblTrack" prefHeight="311.0" prefWidth="800.0" style="-fx-background-color: black;" tableMenuButtonVisible="true">
         <columns>
           <TableColumn fx:id="colNO" maxWidth="520.0" prefWidth="43.0" resizable="false" text="NO." />
@@ -70,12 +71,15 @@
             <Insets right="20.0" />
          </padding>
       </HBox>
+      <Separator opacity="0.3" prefWidth="200.0" />
       <AnchorPane prefHeight="105.0" prefWidth="800.0">
          <children>
             <Line endX="300.0" endY="-40.0" layoutX="388.0" layoutY="76.0" startX="-300.0" startY="-40.0" stroke="WHITE" />
-            <Circle fx:id="back" fill="DODGERBLUE" layoutX="314.0" layoutY="68.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="pause" fill="DODGERBLUE" layoutX="372.0" layoutY="68.0" opacity="0.57" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
-            <Circle fx:id="forward" fill="DODGERBLUE" layoutX="430.0" layoutY="68.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="back" fill="DODGERBLUE" layoutX="334.0" layoutY="68.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="pause" fill="DODGERBLUE" layoutX="392.0" layoutY="68.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="forward" fill="DODGERBLUE" layoutX="450.0" layoutY="68.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label fx:id="lbMin" layoutX="44.0" layoutY="26.0" text="Min" textFill="WHITE" />
+            <Label fx:id="lbMax" layoutX="702.0" layoutY="26.0" text="Max" textFill="WHITE" />
          </children>
       </AnchorPane>
    </children>

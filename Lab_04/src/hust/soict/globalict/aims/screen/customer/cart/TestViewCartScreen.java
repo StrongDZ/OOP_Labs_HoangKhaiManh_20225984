@@ -7,6 +7,7 @@ import hust.soict.globalict.aims.media.DigitalVideoDisc;
 import hust.soict.globalict.aims.media.Track;
 import hust.soict.globalict.aims.screen.customer.controller.CartController;
 import hust.soict.globalict.aims.cart.Cart;
+import hust.soict.globalict.aims.store.Store;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -28,7 +29,7 @@ public class TestViewCartScreen extends Application {
 
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(CART_FXML_FILE_PATH));
 
-        CartController cartController = new CartController(null, cart);
+        CartController cartController = new CartController(new Store(), cart);
 
         fxmlLoader.setController(cartController);
 
