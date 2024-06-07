@@ -1,9 +1,0 @@
-1.When should accessor methods be used?
-Returning Objects Through Interfaces: When a method returns an object that implements a specific interface.
-*Reason:
--Interface Isolation: The interface defines the behavior the code interacts with, not the internal data structure of the returned object.
--Encapsulation Protection: Even if the internal implementation of the object changes, as long as the interface behavior remains consistent, the code using the object remains unaffected. This protects data integrity and encapsulation.
-
-2.If you create a constructor method to build a DVD by title then create a constructor method to build a DVD by category. Does JAVA allow you to do this?
-Java does not allow to build create a constructor method to build a DVD by category after craeting a constructor method to build a DVD by title
-Because: "category" and "title" have the same variable type String so Java can not distinguish two variables when user inputs

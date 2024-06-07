@@ -1,5 +1,0 @@
-6.1.
-    1. What happens if users choose "Cancel"?
-If you choose Cancel option, the message appears "You've chosen: No". 
-It looks like when you choose No option.
-    2. How to customize the options to users: ../src/Customize.java
