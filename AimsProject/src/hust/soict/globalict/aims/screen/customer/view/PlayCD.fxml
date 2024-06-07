@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" spacing="10.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="BOTTOM_LEFT" prefHeight="231.0" prefWidth="800.0" spacing="15.0">
+         <children>
+            <Label fx:id="lbImage" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="205.0" prefWidth="205.0" text="Label" />
+            <VBox alignment="BOTTOM_LEFT" prefHeight="180.0" prefWidth="458.0" spacing="6.0">
+               <children>
+                  <Label text="Playlist" textFill="WHITE" />
+                  <Label fx:id="lbNameOfCD" text="NAME" textFill="WHITE">
+                     <font>
+                        <Font size="38.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbCategory" text="Category" textFill="WHITE" />
+                  <Label fx:id="lbArtist" text="Artist" textFill="WHITE" />
+                  <Label fx:id="lbDirector" text="Director" textFill="WHITE" />
+                  <HBox prefHeight="32.0" prefWidth="448.0" spacing="20.0">
+                     <children>
+                        <Button minHeight="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="92.0" style="-fx-background-color: #58f15d;" text="PLAYING" textFill="WHITE" />
+                        <Button maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="30.0" style="-fx-background-color: #58f15d;" text="ABOUT THE PLAYLIST" textFill="WHITE">
+                           <opaqueInsets>
+                              <Insets top="3.0" />
+                           </opaqueInsets>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </VBox>
+         </children>
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+      </HBox>
+      <Separator opacity="0.3" prefWidth="200.0" />
+      <TableView fx:id="tblTrack" prefHeight="311.0" prefWidth="800.0" style="-fx-background-color: black;" tableMenuButtonVisible="true">
+        <columns>
+          <TableColumn fx:id="colNO" maxWidth="520.0" prefWidth="43.0" resizable="false" text="NO." />
+          <TableColumn fx:id="colTrack" prefWidth="412.0" text="TRACK" />
+            <TableColumn fx:id="colLength" prefWidth="240.0" text="LENGTH" />
+        </columns>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <HBox alignment="CENTER_RIGHT" prefHeight="25.0" prefWidth="800.0" spacing="20.0">
+         <children>
+            <Label fx:id="lbLength" prefHeight="30.0" style="-fx-background-color: gray;" text="length" textFill="WHITE">
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding></Label>
+         </children>
+         <padding>
+            <Insets right="20.0" />
+         </padding>
+      </HBox>
+      <Separator opacity="0.3" prefWidth="200.0" />
+      <AnchorPane prefHeight="105.0" prefWidth="800.0">
+         <children>
+            <Line endX="300.0" endY="-40.0" layoutX="388.0" layoutY="76.0" startX="-300.0" startY="-40.0" stroke="WHITE" />
+            <Circle fx:id="back" fill="DODGERBLUE" layoutX="334.0" layoutY="68.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="pause" fill="DODGERBLUE" layoutX="392.0" layoutY="68.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+            <Circle fx:id="forward" fill="DODGERBLUE" layoutX="450.0" layoutY="68.0" radius="18.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label fx:id="lbMin" layoutX="44.0" layoutY="26.0" text="Min" textFill="WHITE" />
+            <Label fx:id="lbMax" layoutX="702.0" layoutY="26.0" text="Max" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
